@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Package Tracker</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        .error { color: red; }
+        table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+        th, td { border: 1px solid #ccc; padding: 10px; text-align: left; }
+        th { background-color: #f4f4f4; }
+    </style>
+</head>
+<body>
+    <h1>Package Tracker</h1>
+    <form id="package-form">
+        <label>
+            Recipient Name:
+            <input type="text" id="recipient-name" required>
+        </label>
+        <br>
+        <label>
+            Package ID:
+            <input type="number" id="package-id" required>
+        </label>
+        <br>
+        <label>
+            Delivery Address:
+            <input type="text" id="delivery-address" required>
+        </label>
+        <br>
+        <label>
+            Weight (kg):
+            <input type="number" id="weight" required>
+        </label>
+        <br>
+        <button type="submit">Add Package</button>
+    </form>
+    <p class="error" id="error-message"></p>
+    <table id="package-table">
+        <thead>
+            <tr>
+                <th>Recipient Name</th>
+                <th>Package ID</th>
+                <th>Delivery Address</th>
+                <th>Weight</th>
+                <th>Tracking Code</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Rows will be added here dynamically -->
+        </tbody>
+    </table>
+</body>
+<script src="script.js"></script>
+</html>
